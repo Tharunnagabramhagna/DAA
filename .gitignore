@@ -1,0 +1,5 @@
+# Ignore compiled Windows executables in every folder
+*.exe
+*.EXE
+**/*.exe
+**/*.EXE
