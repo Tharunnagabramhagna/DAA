@@ -13,7 +13,7 @@ void linearSearch(vector<int>& arr,int target) {
 }
 
 bool isSorted(vector<int>& arr) {
-    for(int i = 0; i < arr.size(); i++) {
+    for(int i = 0; i < arr.size() - 1; i++) {
         if(arr[i] > arr[i+1])
             return false;
     }
@@ -34,13 +34,13 @@ void binarySearch(vector<int>& arr,int target) {
             end = mid - 1;
     }
 
-    printf("Target not found.");
+    cout << "Target not found." << endl;
 }
 
 int main() {
     int n;
-    printf("Enter the size of the array : ");
-    scanf("%d",&n);
+    cout << "Enter the size of the array : ";
+    cin >> n;
     
     if(n <= 1)
         return 0;
@@ -48,7 +48,7 @@ int main() {
     vector<int>arr(n, 0);
     
     for(int i = 0; i < n; i++) {
-        cout << "Enter" << i << "index element : ";
+        cout << "Enter " << i << " index element : ";
         cin >> arr[i];
     }
     
@@ -70,7 +70,7 @@ int main() {
     if(isSorted(arr))
         binarySearch(arr,target);
     else
-        printf("The array is not sorted for Binary Search.");  
+        cout << "The array is not sorted for Binary Search." << endl;  
     
     return 0;
 }
