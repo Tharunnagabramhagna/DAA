@@ -11,15 +11,13 @@ void frequencyCount(const vector<int>& arr) {
     unordered_map<int, int> freq;
 
     // Count frequencies
-    for (int num : arr) {
+    for (int num : arr)
         freq[num]++;
-    }
 
     // Display results
     cout << "Element frequencies:\n";
-    for (auto& pair : freq) {
+    for (auto& pair : freq)
         cout << pair.first << " --> " << pair.second << endl;
-    }
 }
 
 int main() {

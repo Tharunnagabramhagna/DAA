@@ -25,19 +25,20 @@ void merge(vector<int> &arr, int st, int mid, int end)
 
     while (j <= end)
         temp.push_back(arr[j++]);
-    
-    for(int i = 0; i < temp.size(); i++)
+
+    for (int i = 0; i < temp.size(); i++)
         arr[i + st] = temp[i];
 }
 
 void mergeSort(vector<int> &arr, int st, int end)
 {
-    if(st < end) {
+    if (st < end)
+    {
         int mid = st + (end - st) / 2;
 
-        mergeSort(arr, st, mid); // left half
+        mergeSort(arr, st, mid);      // left half
         mergeSort(arr, mid + 1, end); // right half
-        merge(arr, st, mid, end); // sort and merge the halfs
+        merge(arr, st, mid, end);     // sort and merge the halfs
     }
 }
 
