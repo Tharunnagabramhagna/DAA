@@ -70,7 +70,7 @@ int main() {
     if(isSorted(arr))
         binarySearch(arr,target);
     else
-        cout << "The array is not sorted for Binary Search." << endl;  
+        cout << "Array is not sorted for Binary Search." << endl;  
     
     return 0;
 }
