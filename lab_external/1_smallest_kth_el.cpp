@@ -1,15 +1,16 @@
 /* 1Q) Program to find Kth Smallest no. in a given array with various approaches. */
 
-// 1) Read the number of elements n.
-// 2) Read the array elements.
-// 3) Read the value of k.
-// 4) Check whether k is valid (1 <= k <= n).
-// 5) Apply an appropriate technique to find the Kth smallest element:
+// 1) Start
+// 2) Read the number of elements n.
+// 3) Read the array elements.
+// 4) Read the value of k.
+// 5) Check whether k is valid (1 <= k <= n).
+// 6) Apply an appropriate technique to find the Kth smallest element:
 //      - Sorting: Sort the array in ascending order.
 //      - Min Heap: Construct a min heap and remove the minimum element k-1 times.
 //      - Quick Select: Partition the array around a pivot and locate the element at index k-1.
-// 6) Display the Kth smallest element.
-// 7) Stop.
+// 7) Display the Kth smallest element.
+// 8) Stop.
 
 #include <iostream>
 #include <queue>
@@ -53,10 +54,7 @@ int partition(int arr[], int st, int end)
     for (int j = st; j < end; j++)
     {
         if (arr[j] <= pivot)
-        {
-            i++;
-            swap(arr[i], arr[j]);
-        }
+            swap(arr[++i], arr[j]);
     }
 
     swap(arr[i + 1], arr[end]);
