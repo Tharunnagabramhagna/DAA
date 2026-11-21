@@ -14,6 +14,9 @@
 
 // Formula for number of moves is " 2^n - 1 "
 
+// Time Complexity : O(2^n)
+// Space Complexity : O(n)
+
 // Algorithm
 
 // 1. Start.
@@ -89,11 +92,12 @@ void towerOfHanoiIter(int n)
     for (int i = n; i >= 1; i--)
         A.push(i);
 
-    char dest = 'C', aux = 'B';
+    /* knowledge purpose */
+    // char dest = 'C', aux = 'B';
 
-    // E.g. if disks are 2 then start with moving first disk from A to B
-    if (n % 2 == 0)
-        swap(dest, aux);
+    // // E.g. if disks are 2 then start with moving first disk from A to B
+    // if (n % 2 == 0)
+    //     swap(dest, aux);
 
     int total = (1 << n) - 1; // 2^n - 1
 

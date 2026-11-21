@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+// T.C : O(n logn) ; S.C : O(n)
+
 void merge(int arr[], int st, int mid , int end) {
     vector<int> temp;
 
