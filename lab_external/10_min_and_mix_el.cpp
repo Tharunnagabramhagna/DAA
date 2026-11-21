@@ -17,14 +17,16 @@ when compared to traditional approach. */
 #include <iostream>
 using namespace std;
 
-pair<int,int> findMinMax(int arr[], int st, int end) {
+pair<int, int> findMinMax(int arr[], int st, int end)
+{
     // Base Case-1 (only one element)
-    if(st == end) 
+    if (st == end)
         return {arr[st], arr[end]};
-    
+
     // Base Case-2 (only two elements)
-    if(st == end + 1) {
-        if(arr[st] <= arr[end + 1])
+    if (st == end + 1)
+    {
+        if (arr[st] <= arr[end + 1])
             return {arr[st], arr[end + 1]};
         else
             return {arr[end + 1], arr[st]};
@@ -32,17 +34,18 @@ pair<int,int> findMinMax(int arr[], int st, int end) {
 
     int mid = st + (end - st) / 2;
 
-    pair<int,int> left = findMinMax(arr, st, mid); // left half recursive case
-    pair<int,int> right = findMinMax(arr, mid + 1, end); // right half recursive case
+    pair<int, int> left = findMinMax(arr, st, mid);       // left half recursive case
+    pair<int, int> right = findMinMax(arr, mid + 1, end); // right half recursive case
 
     // min and max among 2 halfs
-    int Min = min(left.first, right.first); 
+    int Min = min(left.first, right.first);
     int Max = max(left.second, right.second);
-    
+
     return {Min, Max};
 }
 
-int main() {
+int main()
+{
     int n;
 
     cout << "Enter the size of the array : ";
@@ -51,15 +54,16 @@ int main() {
 
     int arr[n];
 
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << "Enter the element at index " << i << " : ";
         cin >> arr[i];
     }
 
-    pair<int,int> ans = findMinMax(arr, 0, n-1);
+    pair<int, int> ans = findMinMax(arr, 0, n - 1);
 
     cout << "\nMinimum and Maximum Elements of array (Divider and Conquer) : ";
-    cout << "\nMinimum Element : " << ans.first << endl;
+    cout << "Minimum Element : " << ans.first << endl;
     cout << "Maximum Element : " << ans.second << endl;
 
     return 0;
