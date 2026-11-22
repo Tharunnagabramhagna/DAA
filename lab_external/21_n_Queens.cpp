@@ -73,6 +73,11 @@ int main()
     cout << "Enter the required number of queens : "; // input no. of queens
     cin >> n;
 
+    if(n <= 0) {
+        cout << "Invalid choice!\n";
+        return 0;
+    }
+
     vector<vector<int>> board(n, vector<int>(n, 0)); // NXN chessboard
 
     if (solve(board, 0, n))

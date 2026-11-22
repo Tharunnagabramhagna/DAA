@@ -14,6 +14,22 @@ when compared to traditional approach. */
 // 9. Display the results.
 // 10. Stop.
 
+/* 
+The traditional approach finds the maximum and minimum elements by traversing 
+the array and comparing each element individually. It requires approximately 
+2N − 2 comparisons.
+
+The Divide and Conquer approach divides the array into two halves, 
+recursively finds the maximum and minimum in each half, and combines the results.
+It requires fewer comparisons, approximately 3N/2 − 2 comparisons when N is 
+a power of 2. 
+
+Conclusion: Divide and Conquer is more efficient in terms of the number of comparisons because
+it reduces unnecessary comparisons by finding the minimum and maximum together in smaller 
+subarrays. Both approaches have O(N) time complexity, but Divide and Conquer performs 
+fewer comparisons.
+*/
+
 #include <iostream>
 using namespace std;
 
