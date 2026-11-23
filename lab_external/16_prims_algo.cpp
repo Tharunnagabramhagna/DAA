@@ -30,6 +30,7 @@ int primAlgo(int src, int V, vector<vector<pair<int, int>>> &adj)
     while (pq.size() > 0)
     {
         auto p = pq.top();
+
         int wt = p.first;
         int u = p.second;
         pq.pop();
@@ -38,7 +39,7 @@ int primAlgo(int src, int V, vector<vector<pair<int, int>>> &adj)
         {
             mstSet[u] = true;
             mstCost += wt;
-
+            
             for (int i = 0; i < adj[u].size(); i++)
             {
                 int v = adj[u][i].first;
